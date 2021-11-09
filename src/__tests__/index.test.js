@@ -69,15 +69,15 @@ describe("Testing the products endpoints", () => {
     // We are going to drop the testing database in Mongo
     // We don't need this fake/dummy data anymore because it was just a test
 
-    afterAll((done) => {
-        mongoose.connection.dropDatabase()
-            .then(() => {
-                return mongoose.connection.close()
-            })
-            .then(() => {
-                console.log("Dropped database!")
-                done()
-            })
-    })
+    // afterAll((done) => {
+    //     mongoose.connection.dropDatabase()
+    //         .then(() => {
+    //             return mongoose.connection.close()
+    //         })
+    //         .then(() => {
+    //             console.log("Dropped database!")
+    //             done()
+    //         })
+    // })
 
 })
