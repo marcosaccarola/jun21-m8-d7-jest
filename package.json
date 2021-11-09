@@ -10,7 +10,7 @@
     "dev": "nodemon -r dotenv/config ./src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Luis Antonio & Marco",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
