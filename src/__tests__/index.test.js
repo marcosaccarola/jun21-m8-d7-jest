@@ -3,7 +3,16 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import { app } from "../app.js"
 
+// HINT FROM RECAP ?
+// const response = await request.get("/products/"+ existingProductId)
+    // expect(response.status).toBe(200)
+    
+    // const response = await request.get("/products/NONEXISTING")
+    // expect(response.status).toBe(404)
+
+
 dotenv.config() // IN THIS WAY, IT LOOK AT .ENV
+
 
 const request = supertest(app)
 
