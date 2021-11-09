@@ -3,7 +3,7 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import { app } from "../app.js"
 
-dotenv.config()
+dotenv.config() // IN THIS WAY, IT LOOK AT .ENV
 
 const request = supertest(app)
 
