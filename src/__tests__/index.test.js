@@ -3,7 +3,16 @@ import dotenv from "dotenv"
 import mongoose from "mongoose"
 import { app } from "../app.js"
 
-dotenv.config()
+// HINT FROM RECAP ?
+// const response = await request.get("/products/"+ existingProductId)
+    // expect(response.status).toBe(200)
+    
+    // const response = await request.get("/products/NONEXISTING")
+    // expect(response.status).toBe(404)
+
+
+dotenv.config() // IN THIS WAY, IT LOOK AT .ENV
+
 
 const request = supertest(app)
 
@@ -69,15 +78,15 @@ describe("Testing the products endpoints", () => {
     // We are going to drop the testing database in Mongo
     // We don't need this fake/dummy data anymore because it was just a test
 
-    afterAll((done) => {
-        mongoose.connection.dropDatabase()
-            .then(() => {
-                return mongoose.connection.close()
-            })
-            .then(() => {
-                console.log("Dropped database!")
-                done()
-            })
-    })
+    // afterAll((done) => {
+    //     mongoose.connection.dropDatabase()
+    //         .then(() => {
+    //             return mongoose.connection.close()
+    //         })
+    //         .then(() => {
+    //             console.log("Dropped database!")
+    //             done()
+    //         })
+    // })
 
 })

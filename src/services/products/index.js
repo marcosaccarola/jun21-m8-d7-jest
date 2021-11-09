@@ -1,12 +1,10 @@
 import express from "express";
-import { ProductModel } from "./model";
+import {ProductModel} from "./model.js";
 
-const productsRouter = express.Router();
-
+const productsRouter=express.Router();
 
 productsRouter.get("/", async (req, res) => {
     const products = await ProductModel.find({});
-
     res.send(products || []);
 });
 
